@@ -1,0 +1,242 @@
+﻿{
+  "name": "Marisa",
+  "kind": "Hero",
+  "initialCardIdentifiers": [
+    "MarisaCharacter",
+    "MiniHakkero"
+  ],
+  "initialOffToTheSideCardIdentifiers": [ "MiniHakkeroCoolingElementalFurnace" ],
+  "cards": [
+    {
+      "identifier": "MarisaCharacter",
+      "count": 1,
+      "title": "Marisa Kirisame",
+      "body": "Mini-Hakkero",
+      "backgroundColor": "fbf8f9",
+      "foilBackgroundColor": "FEFEFE",
+      "hitpointsColor": "C94742",
+      "character": true,
+      "powers": [
+        "Place the top card of {Marisa}'s deck under the Mini-Hakkero"
+      ],
+      "icons": [
+        "HasPower"
+      ],
+      "hitpoints": 29,
+      "nemesisIdentifiers": [
+      ],
+      "incapacitatedAbilities": [
+        "One player may play a card now",
+        "One player may draw a card now",
+        "Place the mini-hakkero next to a hero character card, treating Marisa as that hero's name and you as that hero's player. That hero gains the following power: 'Discard a card. Place the top 3 cards of your deck under the mini-hakkero'. You may no longer use incapacitated abilities"
+      ],
+      "flippedIcons": [     
+        "HasPower"
+      ],
+      "openingLines": {
+        "default": "I'll take everything"
+      },
+      "complexity": 1,
+      "tokenPools": [
+        {
+        }
+      ]
+    },
+    {
+      "identifier": "MiniHakkero",
+      "count": 1,
+      "title": "Mini-Hakkero, Elemental Furnace",
+      "keywords": [ "indestructible" ],
+      "powers": [ "Trash all cards under this card{BR}3+: {Marisa} deals 1 target x energy damage{BR}6+: {Marisa} deals 1 target x energy damage{BR}10+: Marisa deals non-hero targets x energy damage" ],
+      "body": [ "6+: At the end of your turn, this card deals {Marisa} x-2 fire damage" ],
+      "icons": [ "DealDamageEnergy" ],
+      "tokenPools": [
+        {
+          "identifier": "HakkeroStack",
+          "name": "Hakkero Stack",
+          "initialValue": 0,
+          "minimumValue": 0
+        }
+      ]
+    },
+    {
+      "identifier": "MiniHakkeroCoolingElementalFurnace",
+      "count": 1,
+      "title": "Mini-Hakkero, 'Cooling Elemental Furnace'",
+      "keywords": [ "indestructible" ],
+      "powers": [ "Trash all cards under this card. Swap this card to 'Mini-Eight Trigram Furnace'. Reduce damage {Marisa} takes by x until the end of the turn. Cards with the tag catalyst count as 3. {Marisa} deals herself 5 phsychic damage" ],
+      "body": [ "" ],
+      "icons": [ "ReduceDamageTaken" ],
+      "tokenPools": [
+        {
+          "identifier": "HakkeroStack",
+          "name": "Hakkero Stack",
+          "initialValue": 0,
+          "minimumValue": 0
+        }
+      ]
+    },
+    {
+      "identifier": "HardWorkingMagician",
+      "count": 1,
+      "title": "Hard-Working Magician",
+      "body": [
+        "After another player uses a one-shot, {Marisa} may discard a card to take their card into her hand. She plays these cards as herself and discards them to their respective pile",
+        "At the start of your turn, {Marisa} deals herself x-1 psychic damage, where x = cards in her hand from other decks. If she has no cards from other decks in your hand, reshuffle this card back into the deck."
+      ],
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "icons": ["Manipulate","Discard"]
+    },
+    {
+      "identifier": "BorrowedItems",
+      "count": 1,
+      "title": "Borrowed Items",
+      "keywords": [
+        "ongoing"
+      ],
+      "body": [
+        "If an equipment card outside of your play area would be destroyed, you may place it under this card.",
+        "If a hero target deals {Marisa} x or more damage, return all equipment cards under this card to the hands of their players. (x = double the number of cards under this card)",
+        "At the start of your turn, you may move a card under this card to the Hini-Hakkero"
+      ],
+      "icons": ["Manipulate"]
+    },
+    {
+      "identifier": "BambooBroom",
+      "count": 3,
+      "title": "Bamboo Broom",
+      "keywords": [
+        "equipment",
+        "limited"
+      ],
+      "powers": [
+        "{Marisa} deals 1 target 1 melee damage. You may destroy a card under the Mini-Hakkero."
+      ],
+      "body": [
+        "3+: {Marisa} deals 1 target 3 melee damage",
+        "6+: {Marisa} deals up to 3 targets 3 energy damage",
+        "10+: {Marisa} deals 1 target x melee damage, where x = number of cards under the Mini-Hakkero"
+      ],
+      "icons": [
+        "DealDamageMelee",
+        "DealDamageEnergy",
+        "HasPower"
+      ],
+      "flavorText": ""
+    },
+    {
+      "identifier": "FineTuning",
+      "count": 3,
+      "title": "Fine Tuning",
+      "keywords": [
+        "one-shot"
+      ],
+      "body": "If the mini-Hakkero is on 'Cooling Elemental Furnace', destroy all but 1 card underneath it and flip it.",
+      "icons": ["Manipulate"],
+      "flavorText": ""
+    },
+    {
+      "identifier": "OrdinaryMagician",
+      "count": 4,
+      "title": "Ordinary Magician",
+      "keywords": [
+        "ongoing",
+        "limited"
+      ],
+      "body": "One-shots {Marisa} plays may go under the mini-Hakkero instead of the discard",
+      "icons": [ "Manipulate" ],
+      "flavorText": ""
+    },
+    {
+      "identifier": "OrreriesSun",
+      "count": 4,
+      "title": "Orreries Sun",
+      "hitpoints": 3,
+      "keywords": [ "equipment" ],
+      "body": [
+        "At the start of your turn, this card deals 1 target 0 energy damage",
+        "3+: Increase the damage this card deals by 1",
+        "6+: At the end of your turn, this card deals 1 target 0 energy damage",
+        "10+: Increase the damage this card deals by 1"
+      ],
+      "icons": [ "StartAndEndOfTurnAction", "DealDamageEnergy" ]
+    },
+    {
+      "identifier": "GrandStardust",
+      "count": 4,
+      "title": "Grand Stardust",
+      "keywords": [
+        "one-shot",
+        "catalyst"
+      ],
+      "body": [
+        "{Marisa} deals 1 target 1 Projectile damage",
+        "3+: {Marisa} deals the same target 3 Fire damage",
+        "6+: {Marisa} deals the same target 3 Fire damage"
+      ],
+      "icons" : ["DealDamageProjectile", "DealDamageFire"],
+    },
+    {
+      "identifier": "MeteonicDebris",
+      "count": 4,
+      "title": "Meteonic Debris",
+      "keywords": [ "one-shot", "catalyst" ],
+      "body": [
+        "{Marisa} deals 1 target 1 Energy damage",
+        "3+: {Marisa} deals up to 3 targets 2 Energy damage",
+        "6+: {Marisa} deals up to 3 targets 3 Energy damage"
+      ],
+      "icons": ["DealDamageEnergy"]
+    },
+    {
+      "identifier": "NarrowSpark",
+      "count": 4,
+      "title": "Narrow Spark",
+      "keywords": [ "one-shot", "catalyst" ],
+      "body": [
+        "{Marisa} deals 1 target 1 Radiant damage",
+        "3+: {Marisa} deals the same target 2 irreducible Radiant damage",
+        "6+: {Marisa} deals the same target 2 irreducible Radiant damage"
+      ],
+      "icons": ["DealDamageRadiant"]
+    },
+    {
+      "identifier": "MagicalWasteRecyclingBomb",
+      "count": 4,
+      "title": "Magical-Waste Recycling Bomb",
+      "keywords": [ "one-shot", "catalyst" ],
+      "body": [
+        "{Marisa} may destroy an ongoing or environment card.",
+        "3+: {Marisa} may destroy an ongoing or environment card",
+        "6+: {Marisa} deals 1 target 6 energy damage. {Marisa} deals herself 2 energy damage."
+      ],
+      "icons": ["DestroyOngoing","DestroyEnvironment","DealDamageEnergy"]
+    },
+    {
+      "identifier": "MushroomSoup",
+      "count": 4,
+      "title": "Mushroom Soup",
+      "keywords": [ "one-shot", "catalyst" ],
+      "body": [
+        "{Marisa} heals 2 HP",
+        "3+: Reduce the damage {Marisa} takes until the start of your next turn by 1",
+        "6+: {Marisa} heals 4 HP"
+      ],
+      "icons": ["GainHP", "ReduceDamageTaken"]
+    },
+    {
+      "identifier": "GreedyMagician",
+      "count": 4,
+      "title": "Greedy Magician",
+      "keywords": [ "one-shot" ],
+      "body": [
+        "Reveal cards from the top of {Marisa}'s deck until a Catalyst card is revealed and either put it into play or under the Mini-Hakkero.",
+        "Shuffle your deck"
+      ],
+      "icons": ["Manipulate"]
+    }
+  ]
+}
