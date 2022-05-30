@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/packages
+/.vs
+/AzureTouhou4/obj
+/AzureTouhou4/bin
+/AzureTouhou4/bin/Debug
+/AzureTouhou4/bin/Release
+/MyModConsole
+/MyModTest/bin
+/MyModTest/bin/Debug
+/MyModTest/bin/Release
+/MyModTest/obj
+
